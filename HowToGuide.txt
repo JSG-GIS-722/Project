@@ -1,0 +1,5 @@
+The aim of this project was to identify areas of mixed land cover on orthophotography 4-band raster data (RGB + near infrared) using new-generation deep learning implementations.
+Deep learning is a type of machine learning with several layers of nonlinear processing which allow users to identify patterns, objects, and pixels through models. 
+It is a significant improvement on previous Machine Learning systems since it does not require vast amounts of training samples produced by expert users. 
+Several ArcGis Pro Deep Learning models support sparse training data with remarkable success. In this project, training data for our models was gathered in intervals of less than 30'.
+

@@ -1,4 +1,4 @@
-name: arcgispro-py3
+name: jsgenv
 channels:
   - conda-forge
   - defaults
