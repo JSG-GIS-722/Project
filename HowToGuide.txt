@@ -1,5 +1,22 @@
-The aim of this project was to identify areas of mixed land cover on orthophotography 4-band raster data (RGB + near infrared) using new-generation deep learning implementations.
+Introduction and context
+
+During the second term of this MSc programme, I joined a Work Placement module run by the University in partnership with OSNI.
+The project in which I was invited to participate involved identifying areas of mixed land cover on orthophotography 4-band raster data (RGB + near infrared).
+A significant amount of work had been covered by the OSNI team. There was, however, an area which for different reasons had been left unexplored: using machine learning (and in particular deep learning)
+to solve this problem.  In particular, I became interested in applying deep learning in sparse sampling scenarios, as some of the literarture has shown (). 
+
 Deep learning is a type of machine learning with several layers of nonlinear processing which allow users to identify patterns, objects, and pixels through models. 
-It is a significant improvement on previous Machine Learning systems since it does not require vast amounts of training samples produced by expert users. 
-Several ArcGis Pro Deep Learning models support sparse training data with remarkable success. In this project, training data for our models was gathered in intervals of less than 30'.
+It is a significant improvement on previous Machine Learning systems since it does not require vast amounts of training samples produced by expert users.
+
+The Work Placement and the project were completed very successfuly: I managed to carry out pixel classification of orthophotography data provided by OSNI to identify land cover
+using sparse sampling (the time I took to collect training samples was never more than 30').  The outcome of the classification was assessed and found to outperform previous approaches.
+
+Although the project was a success, I realised there was room for improvement.  I had carried out the analysis using ArcGis Pro user interface.  However, I believed using ArcGis Pro's python environment,
+libraries and dependencies would allow me to deepen my analysis, customise it and provide additional features to my audience.  Summarising, this project is the result of applying what I have learned in
+EGM722 (Programming for GIS and Remote Sensing) to a topic I was presented while doing EGM725, and consists of providing a tool to carry out image classification of land cover by
+ preprocessing target data, exporting training samples, training and evaluating deep learning models, and displaying results. 
+
+
+ 
+
 
