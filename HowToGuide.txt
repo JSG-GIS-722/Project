@@ -14,9 +14,15 @@ using sparse sampling (the time I took to collect training samples was never mor
 Although the project was a success, I realised there was room for improvement.  I had carried out the analysis using ArcGis Pro user interface.  However, I believed using ArcGis Pro's python environment,
 libraries and dependencies would allow me to deepen my analysis, customise it and provide additional features to my audience.  Summarising, this project is the result of applying what I have learned in
 EGM722 (Programming for GIS and Remote Sensing) to a topic I was presented while doing EGM725, and consists of providing a tool to carry out image classification of land cover by
- preprocessing target data, exporting training samples, training and evaluating deep learning models, and displaying results. 
+preprocessing target data, exporting training samples, training and evaluating deep learning models, and displaying results. 
 
 
  
+Setup/Installation
 
+GIT repository: https://github.com/JSG-GIS-722/Project.git
+
+The best way to use this tool is to open the notebook EGM722Classifier.ipynb from a new ArcGis Pro project.  Some of the deep learning dependencies used here require the ArcGIS Image Analyst extension, 
+ArcGIS Spatial Analyst extension or the ArcGIS 3D Analyst extension, so a licensed copy of ArcGis Pro needs to be open while running the notebook.  This repository includes the required .yml file (created using
+conda env export > environment.yml) to duplicate the python environment, but the before mentioned licensing constrains still apply, though.
 
