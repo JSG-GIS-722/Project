@@ -2,17 +2,17 @@ Introduction and context
 
 During the second term of this MSc programme, I joined a Work Placement module run by the University in partnership with OSNI.
 The project in which I was invited to participate involved identifying areas of mixed land cover on orthophotography 4-band raster data (RGB + near infrared).
-A significant amount of work had been covered by the OSNI team. There was, however, an area which for different reasons had been left unexplored: using machine learning (and in particular deep learning)
+A significant amount of work had been covered by the OSNI team. There was, however, an area which had been left unexplored: using machine learning (and in particular deep learning)
 to solve this problem.  In particular, I became interested in applying deep learning in sparse sampling scenarios, as some of the literarture has shown (). 
 
 Deep learning is a type of machine learning with several layers of nonlinear processing which allow users to identify patterns, objects, and pixels through models. 
 It is a significant improvement on previous Machine Learning systems since it does not require vast amounts of training samples produced by expert users.
 
 The Work Placement and the project were completed very successfuly: I managed to carry out pixel classification of orthophotography data provided by OSNI to identify land cover
-using sparse sampling (the time I took to collect training samples was never more than 30').  The outcome of the classification was assessed and found to outperform previous approaches.
+using sparse sampling (the time I took to collect training samples was never more than 30').  The outcome of the classification was assessed and found to outperform previous approaches carried out by the organisation.
 
 Although the project was a success, I realised there was room for improvement.  I had carried out the analysis using ArcGis Pro user interface.  However, I believed using ArcGis Pro's python environment,
-libraries and dependencies would allow me to deepen my analysis, customise it and provide additional features to my audience.  Summarising, this project is the result of applying what I have learned in
+libraries and dependencies would allow me to deepen my analysis, customise it and provide additional features.  Summarising, this project is the result of applying what I have learned in
 EGM722 (Programming for GIS and Remote Sensing) to a topic I was presented while doing EGM725, and consists of providing a tool to carry out image classification of land cover by
 preprocessing target data, exporting training samples, training and evaluating deep learning models, and displaying results. 
 
@@ -20,9 +20,19 @@ preprocessing target data, exporting training samples, training and evaluating d
  
 Setup/Installation
 
-GIT repository: https://github.com/JSG-GIS-722/Project.git
+Public GIT repository: https://github.com/JSG-GIS-722/Project.git
+Test data which is affected by specific copyright arrangements can be found in:
 
-The best way to use this tool is to open the notebook EGM722Classifier.ipynb from a new ArcGis Pro project.  Some of the deep learning dependencies used here require the ArcGIS Image Analyst extension, 
+The best way to use this Classifier tool is to open the notebook EGM722Classifier.ipynb from a new ArcGis Pro project.  Some of the deep learning dependencies used here require the ArcGIS Image Analyst extension, 
 ArcGIS Spatial Analyst extension or the ArcGIS 3D Analyst extension, so a licensed copy of ArcGis Pro needs to be open while running the notebook.  This repository includes the required .yml file (created using
 conda env export > environment.yml) to duplicate the python environment, but the before mentioned licensing constrains still apply, though.
 
+This project was carried out using ArcGis Pro v2.9 with ESRI's Deep Learning libraries 2.9 and a functioning dedicated python environment.
+Hardware-accelerated GPU scheduling is recommended to reduce latency and improve performance when executing processor-intensive Deep Learning algorithms.
+
+The project uses training data obtained from OSNI's own 4-band orthoimagery (spatial resolution of 40cm, and a red, green, blue and NIR band).  This training data has been exported using ArcGIS Pro for the models being analysed.
+
+To help organising the project, I mapped a new U: drive, where I created a Project folder for public GIT files, and a ProjectData folder for OSNI copyright files and script output files to improve readibility and understanding of the project.
+
+Finally, I realised that using the python environment through a notebook had many advantages but it run a lot slower than through ArcGIS Pro user interface menus.  I believe that's the result of ArcGis Pro using paralelism (splitting
+a tasks among different hardware cores to speed up processing).  I therefore also employed paralelism through the multiprocessing python library, successfully running the process 16 times quicker (the number of my cores) than before.
