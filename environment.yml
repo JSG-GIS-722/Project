@@ -1,4 +1,4 @@
-name: jsgenv
+name: C:\Program Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3
 channels:
   - conda-forge
   - defaults
